@@ -10,13 +10,13 @@ jobs:
         with:
           creds: '${{ secrets.AZURESECRET }}'
       
-      - name: Azure Powershell action
-        uses: Azure/powershell@v1
-        with:
-          inlineScript: |
-            Connect-AzAccount
-            Get-AzResourceGroup -Name hemievents
-          azPSVersion: "latest"
+      # - name: Azure Powershell action
+      #   uses: Azure/powershell@v1
+      #   with:
+      #     inlineScript: |
+      #       Connect-AzAccount
+      #       Get-AzResourceGroup -Name hemievents
+      #     azPSVersion: "latest"
 
       - name: Azure CLI action
         uses: azure/CLI@v1
