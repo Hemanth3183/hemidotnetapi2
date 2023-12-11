@@ -17,4 +17,8 @@ jobs:
         run: dotnet restore
       - name: Build code
         run: dotnet build
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: drop
     
